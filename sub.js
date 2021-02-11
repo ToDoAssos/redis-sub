@@ -7,7 +7,7 @@ const config = {
 var subscriber = redis.createClient(config)
 
 subscriber.on("message", (channel, message) => {
-  console.log("Message '" + message + "' on channel '" + channel + "' arrived!")
+  console.log("Message reçu '" + message + "' sur le channel '" + channel)
 })
 
 subscriber.subscribe("users channel")
